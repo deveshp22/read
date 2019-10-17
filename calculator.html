@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+	<style>
+		input
+		{
+			padding: 8px;
+			margin:5px;
+			border:7px solid red;
+		}
+		input[type="text"]
+			{
+				padding: 20px;
+				width: 75%;
+				font-size:20px;
+			}
+	</style>
+</head>
+	<body>
+	<table border="2">
+	<tr><td colspan="4"><input type="text" id="ans" ></td></tr>
+	<tr><td colspan="3"></td><td><input type="button" onclick="cler()" value="C"></td></tr>
+	<tr><td><input type="button" onclick="seven()" value="7"></td>
+	<td><input type="button" onclick="eight()" value="8"></td>
+	<td><input type="button" onclick="nine()" value="9"></td>
+	<td><input type="button" onclick="divide()" value="/"></td>
+	</tr>
+	<tr><td><input type="button" onclick="four()" value="4"></td>
+	<td><input type="button" onclick="five()" value="5"></td>
+	<td><input type="button" onclick="six()" value="6"></td>
+	<td><input type="button" onclick="mul()" value="X"></td>
+	</tr>
+	<tr><td><input type="button" onclick="one()" value="1"></td>
+	<td><input type="button" onclick="two()" value="2"></td>
+	<td><input type="button" onclick="three()" value="3"></td>
+	<td><input type="button" onclick="sub()" value="-"></td>
+	</tr>
+	<tr><td><input type="button" onclick="point()" value="."></td>
+	<td><input type="button" onclick="zero()" value="0"></td>
+	<td><input type="button" onclick="equal()" value="="></td>
+	<td><input type="button" onclick="add()" value="+"></td>
+	</tr>
+ 
+ 
+	</table>
+</body>
+	<script>
+	var result = document.getElementById("ans");
+	function cler(){
+  	  result.value=null;
+	}
+ 
+	function one(){
+    	result.value+=1;
+	}
+	function two(){
+ 	   result.value+=2;
+	}
+	function three(){
+   	 result.value+=3;
+	}
+	function four(){
+    	result.value+=4;
+	}
+	function five(){
+  	  result.value+=5;
+	}
+	function six(){
+    	result.value+=6;
+	}
+	function seven(){
+    	result.value+=7;
+	}
+	function eight(){
+    	result.value+=8;
+	}
+	function nine(){
+   	 result.value+=9;
+	}
+	function zero(){
+   	 result.value+=0;
+	}
+	function sub(){
+   	 result.value+='-';
+	}
+	function add(){
+   	 result.value+='+';
+	}
+	function mul(){
+  	  result.value+='*';
+	}
+	function divide(){
+    	result.value+='/';
+	}
+	function equal(){
+    
+        result.value =eval(result.value);
+	}
+ 
+ 
+ </script>
+ 
+</html>
